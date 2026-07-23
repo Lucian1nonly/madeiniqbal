@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlFauzan Bali Tour | Luxury Private Experiences</title>
+    <meta name="description" content="Premium private tours and luxury transport in Bali. Experience the island with AlFauzan Bali Tour.">
+    
+    <!-- Fonts: Playfair Display, Poppins, Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS (CDN for development) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: '#0F3D3E',
+                        matte: '#111111',
+                        gold: '#C8A96B',
+                        ivory: '#F8F5F0',
+                        olive: '#283618',
+                        goldLight: '#E5D4A5',
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        poppins: ['"Poppins"', 'sans-serif'],
+                        cairo: ['"Cairo"', 'sans-serif'],
+                    },
+                    animation: {
+                        'slow-zoom': 'zoom 20s infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        zoom: { '0%': { transform: 'scale(1)' }, '100%': { transform: 'scale(1.1)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-ivory text-matte font-poppins antialiased overflow-x-hidden selection:bg-gold selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 top-0">
+        <div class="absolute inset-0 bg-emerald/80 backdrop-blur-md transition-all duration-300" id="nav-bg"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="flex items-center justify-between h-20 md:h-24">
+                <!-- Logo -->
+                <a href="#" class="group">
+                    <span class="text-2xl font-playfair font-bold text-white tracking-wider group-hover:text-gold transition-colors duration-300">
+                        AlFauzan<span class="text-gold">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 rtl:space-x-reverse items-center">
+                    <li><a href="#home" class="text-sm uppercase tracking-[0.15em] text-white/90 hover:text-gold transition-colors" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#destinations" class="text-sm uppercase tracking-[0.15em] text-white/90 hover:text-gold transition-colors" data-i18n="nav_dest">Destinations</a></li>
+                    <li><a href="#activities" class="text-sm uppercase tracking-[0.15em] text-white/90 hover:text-gold transition-colors" data-i18n="nav_act">Activities</a></li>
+                    <li><a href="#cars" class="text-sm uppercase tracking-[0.15em] text-white/90 hover:text-gold transition-colors" data-i18n="nav_cars">Transport</a></li>
+                    <li><a href="#contact" class="text-sm uppercase tracking-[0.15em] text-white/90 hover:text-gold transition-colors" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+
+                <!-- Actions -->
+                <div class="flex items-center gap-4">
+                    <button id="lang-switch" class="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-emerald transition-all duration-300 text-xs font-bold" title="Switch Language">
+                        <span id="lang-icon">AR</span>
+                    </button>
+                    <a href="https://wa.me/6285647100418?text=Hello%20AlFauzan%20Bali%20Tour,%0A%0AI%20would%20like%20to%20inquire%20about%20your%20premium%20services.%0APlease%20share%20the%20available%20packages%20and%20pricing.%20Thank%20you!" class="hidden lg:flex items-center gap-2 bg-gold hover:bg-white hover:text-emerald text-emerald px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-gold/20">
+    <i class="fa-brands fa-whatsapp text-lg"></i>
+    <span class="text-sm font-semibold tracking-wide uppercase" data-i18n="btn_book">Book Now</span>
+</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover animate-slow-zoom">
+                <!-- Placeholder video link (Use your own premium video here) -->
+                <source src="https://cdn.pixabay.com/video/2020/07/30/45379-445168778_large.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-emerald/80 via-emerald/30 to-emerald/90"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1500">
+            <p class="text-gold text-sm md:text-base uppercase tracking-[0.3em] font-semibold mb-6 animate-float" data-i18n="hero_sub">Premium Bali Experience</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold text-white mb-8 leading-tight">
+                <span class="block" data-i18n="hero_title_1">Luxury Bali</span>
+                <span class="block italic font-light text-gold mt-2" data-i18n="hero_title_2">Journey</span>
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed" data-i18n="hero_desc">
+                Private tours, premium transport, and unforgettable tropical memories tailored exclusively for you.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#destinations" class="group relative px-8 py-3 bg-transparent border border-white text-white overflow-hidden rounded-full transition-all duration-300 hover:border-gold hover:text-gold">
+                    <span class="relative z-10 text-sm uppercase tracking-widest font-semibold" data-i18n="btn_explore">Explore Tours</span>
+                </a>
+                <a href="https://wa.me/6285647100418?text=Hello%20AlFauzan%20Bali%20Tour,%20I%20would%20like%20to%20inquire%20about%20your%20services." class="group px-8 py-3 bg-gold text-emerald font-bold rounded-full shadow-lg shadow-gold/30 hover:bg-white hover:text-emerald transition-all duration-300">
+    <span class="text-sm uppercase tracking-widest flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i> <span data-i18n="btn_whatsapp">WhatsApp Us</span>
+    </span>
+</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70">
+            <span class="text-white text-[10px] uppercase tracking-widest">Scroll</span>
+            <div class="w-[1px] h-12 bg-white/50"></div>
+        </div>
+    </header>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-24 lg:py-32 px-6 bg-ivory relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="sec_dest_sub">The Paradise</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-emerald" data-i18n="sec_dest_title">Exclusive Destinations</h2>
+                <div class="w-20 h-[2px] bg-gold mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Destination Cards -->
+                <div class="group relative h-[450px] overflow-hidden rounded-sm cursor-pointer shadow-xl shadow-emerald/5" data-aos="fade-up" data-aos-delay="100">
+    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Pandawa Beach">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald/90 via-emerald/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-white font-playfair text-2xl font-bold mb-2">Pandawa Beach</h3>
+                        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">White sand cliffs and crystal waters.</p>
+                        <div class="mt-4 w-8 h-[1px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                    </div>
+                </div>
+
+                <div class="group relative h-[450px] overflow-hidden rounded-sm cursor-pointer shadow-xl shadow-emerald/5" data-aos="fade-up" data-aos-delay="200">
+    <img src="https://images.pexels.com/photos/6015583/pexels-photo-6015583.jpeg?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Melasti Beach">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald/90 via-emerald/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-white font-playfair text-2xl font-bold mb-2">Melasti Beach</h3>
+                        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Limestone cliffs and turquoise waves.</p>
+                        <div class="mt-4 w-8 h-[1px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                    </div>
+                </div>
+
+                <div class="group relative h-[450px] overflow-hidden rounded-sm cursor-pointer shadow-xl shadow-emerald/5" data-aos="fade-up" data-aos-delay="300">
+    <img src=https://images.pexels.com/photos/32191652/pexels-photo-32191652.jpeg?w=800&auto=format&fit=crop class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Melasti Beach">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald/90 via-emerald/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-white font-playfair text-2xl font-bold mb-2">Ubud Culture</h3>
+                        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Sacred forests, rice terraces, and arts.</p>
+                        <div class="mt-4 w-8 h-[1px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                    </div>
+                </div>
+
+                <div class="group relative h-[450px] overflow-hidden rounded-sm cursor-pointer shadow-xl shadow-emerald/5" data-aos="fade-up" data-aos-delay="400">
+    <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Kuta Sunset">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald/90 via-emerald/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-white font-playfair text-2xl font-bold mb-2">Kuta Sunset</h3>
+                        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Legendary sunsets and vibrant energy.</p>
+                        <div class="mt-4 w-8 h-[1px] bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+<section id="activities" class="py-24 lg:py-32 bg-emerald text-white relative overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-gold/10 rounded-full blur-[100px]"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-white/5 rounded-full blur-[80px]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6" data-aos="fade-up">
+            <div>
+                <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="sec_act_sub">Experience More</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold" data-i18n="sec_act_title">Curated Activities</h2>
+            </div>
+            <div class="w-24 h-[2px] bg-gold/50"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Activity 1: Watersport -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1680238572982-e59705701ac3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Watersport Benoa" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-water text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">Watersport Benoa</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">Jet ski, parasailing, and banana boat adventures in the pristine waters of Tanjung Benoa.</p>
+                </div>
+            </div>
+
+            <!-- Activity 2: ATV -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582959746698-660400376dd6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="ATV Quad Ride" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-motorcycle text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">ATV Quad Ride</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">Adrenaline pumping rides through jungle trails, rivers, and volcanic mud.</p>
+                </div>
+            </div>
+
+            <!-- Activity 3: VW Tour -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/7216259/pexels-photo-7216259.jpeg" 
+                         alt="VW Classic Tour" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-car-side text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">VW Classic Tour</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">Vintage convertible VW experience exploring scenic Bali backroads.</p>
+                </div>
+            </div>
+
+            <!-- Activity 4: Rafting -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/33732199/pexels-photo-33732199.jpeg" 
+                         alt="Rafting Ubud" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-person-swimming text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">Rafting Ubud</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">White water rafting through lush rainforests along the majestic Ayung River.</p>
+                </div>
+            </div>
+
+            <!-- Activity 5: Bali Swing -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="400">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/35720624/pexels-photo-35720624.jpeg" 
+                         alt="Bali Swing" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-tree text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">Bali Swing</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">Iconic swings overlooking lush rice paddies and jungle valleys.</p>
+                </div>
+            </div>
+
+            <!-- Activity 6: Nusa Penida -->
+            <div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="500">
+                <div class="h-52 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/4239627/pexels-photo-4239627.jpeg" 
+                         alt="Nusa Penida" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+                </div>
+                <div class="p-8 relative">
+                    <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors">
+                        <i class="fa-solid fa-water text-2xl text-gold group-hover:text-emerald"></i>
+                    </div>
+                    <h3 class="text-xl font-playfair font-bold mb-3 mt-4">Nusa Penida</h3>
+                    <p class="text-white/60 text-sm leading-relaxed font-light">Full day tour to crystal bays, broken beaches, and dinosaur cliffs.</p>
+                </div>
+            </div>
+
+            <!-- Activity 7: Horse Riding -->
+<div class="group relative overflow-hidden rounded-sm bg-white/5 backdrop-blur-sm border border-white/10 hover:border-gold/50 transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="600">
+    <div class="h-52 overflow-hidden">
+        <!-- Gambar Kuda di Pantai/Pedesaan Bali -->
+        <img src="https://images.pexels.com/photos/10136251/pexels-photo-10136251.jpeg" 
+             alt="Horse Riding Bali" 
+             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-emerald to-transparent opacity-60"></div>
+    </div>
+    <div class="p-8 relative">
+        <!-- Icon Kuda -->
+        <div class="absolute -top-10 left-8 w-16 h-16 rounded-full border-2 border-gold bg-emerald flex items-center justify-center group-hover:bg-gold transition-colors shadow-lg">
+            <i class="fa-solid fa-horse text-2xl text-gold group-hover:text-emerald"></i>
+        </div>
+        <h3 class="text-xl font-playfair font-bold mb-3 mt-4">Horse Riding</h3>
+        <p class="text-white/60 text-sm leading-relaxed font-light">Enjoy a serene ride along the black sand beaches or through lush rice fields with our gentle horses.</p>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+  <!-- Car Rental Section -->
+<section id="cars" class="py-24 lg:py-32 px-6 bg-ivory">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3" data-i18n="sec_car_sub">Comfort & Style</span>
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-emerald" data-i18n="sec_car_title">Premium Fleet</h2>
+            <div class="w-20 h-[2px] bg-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1: Avanza -->
+            <div class="bg-white rounded-sm shadow-lg shadow-emerald/5 border-t-4 border-gold hover:-translate-y-2 transition-transform duration-300 group overflow-hidden" data-aos="fade-up">
+                <!-- Car Image -->
+                <div class="h-48 overflow-hidden bg-gray-100">
+                    <img src="Avanza.jpeg" 
+                         alt="All New Avanza" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-playfair font-bold text-emerald group-hover:text-gold transition-colors">All New Avanza</h3>
+                        <p class="text-gray-500 text-sm mt-1">Black Edition • 6-7 Pax</p>
+                    </div>
+                    <div class="text-center mb-8 border-b border-dashed border-gray-200 pb-8">
+                        <span class="text-5xl font-playfair font-bold text-gold">500<span class="text-2xl">K</span></span>
+                        <span class="text-gray-400 text-sm block mt-2">/ Day</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-4 mb-8 px-4">
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Fuel</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Parking & Toll</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Professional Driver</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center pb-2"><span>8–10 Hours Tour</span> <i class="fa-solid fa-clock text-gold"></i></li>
+                    </ul>
+                    <a href="https://wa.me/6285647100418?text=I%20want%20to%20book%20All%20New%20Avanza" class="block w-full text-center border-2 border-emerald text-emerald py-3 rounded-sm hover:bg-emerald hover:text-white transition-colors uppercase text-xs tracking-widest font-bold">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Car 2: Innova -->
+            <div class="bg-white rounded-sm shadow-xl shadow-emerald/10 border-t-4 border-emerald hover:-translate-y-2 transition-transform duration-300 relative group overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-0 right-0 bg-emerald text-white text-[10px] uppercase tracking-widest px-3 py-1 font-bold z-10">Popular</div>
+                
+                <!-- Car Image -->
+                <div class="h-48 overflow-hidden bg-gray-100">
+                    <img src="Innova.jpeg" 
+                         alt="Toyota Innova" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-playfair font-bold text-emerald group-hover:text-gold transition-colors">Toyota Innova</h3>
+                        <p class="text-gray-500 text-sm mt-1">Reborn • 6-7 Pax</p>
+                    </div>
+                    <div class="text-center mb-8 border-b border-dashed border-gray-200 pb-8">
+                        <span class="text-5xl font-playfair font-bold text-gold">500<span class="text-2xl">K</span></span>
+                        <span class="text-gray-400 text-sm block mt-2">/ Day</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-4 mb-8 px-4">
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Fuel</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Parking & Toll</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Professional Driver</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center pb-2"><span>8–10 Hours Tour</span> <i class="fa-solid fa-clock text-gold"></i></li>
+                    </ul>
+                    <a href="https://wa.me/6285647100418?text=I%20want%20to%20book%20Toyota%20Innova" class="block w-full text-center bg-emerald text-white py-3 rounded-sm hover:bg-matte transition-colors uppercase text-xs tracking-widest font-bold">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Car 3: Hiace -->
+            <div class="bg-white rounded-sm shadow-lg shadow-emerald/5 border-t-4 border-gold hover:-translate-y-2 transition-transform duration-300 group overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <!-- Car Image -->
+                <div class="h-48 overflow-hidden bg-gray-100">
+                    <img src="Hiace.jpeg" 
+                         alt="Toyota Hiace" 
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-playfair font-bold text-emerald group-hover:text-gold transition-colors">Toyota Hiace</h3>
+                        <p class="text-gray-500 text-sm mt-1">Premio • 14-15 Pax</p>
+                    </div>
+                    <div class="text-center mb-8 border-b border-dashed border-gray-200 pb-8">
+                        <span class="text-5xl font-playfair font-bold text-gold">1.300<span class="text-2xl">K</span></span>
+                        <span class="text-gray-400 text-sm block mt-2">/ Day</span>
+                    </div>
+                    <ul class="text-sm text-gray-600 space-y-4 mb-8 px-4">
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Fuel</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Parking & Toll</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center border-b border-gray-50 pb-2"><span>Professional Driver</span> <i class="fa-solid fa-check text-gold"></i></li>
+                        <li class="flex justify-between items-center pb-2"><span>8–10 Hours Tour</span> <i class="fa-solid fa-clock text-gold"></i></li>
+                    </ul>
+                   <a href="https://wa.me/6285647100418?text=I%20want%20to%20book%20Toyota%20Hiace" class="block w-full text-center border-2 border-emerald text-emerald py-3 rounded-sm hover:bg-emerald hover:text-white transition-colors uppercase text-xs tracking-widest font-bold">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Tour Program Timeline -->
+    <section id="programs" class="py-24 lg:py-32 bg-stone-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3">Signature</span>
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-emerald" data-i18n="sec_prog_title">Tour Programs</h2>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gold before:to-transparent">
+                
+                <!-- Item 1 -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-left">
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 bg-emerald border-4 border-gold rounded-full flex items-center justify-center text-white text-xs md:-translate-x-1/2 z-10">01</div>
+                    <div class="ml-14 md:ml-0 md:w-1/2 md:pr-12 md:text-right rtl:md:text-left rtl:md:pr-0 rtl:md:pl-12 w-full">
+                        <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
+                            <h3 class="text-xl font-playfair font-bold text-emerald mb-2">Uluwatu Cliff Tour</h3>
+                            <p class="text-gray-600 text-sm mb-3">GWK Park, Padang Padang, Uluwatu Temple, Kecak Dance Sunset.</p>
+                            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&auto=format&fit=crop" class="w-full h-32 object-cover rounded-sm mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-right">
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 bg-emerald border-4 border-gold rounded-full flex items-center justify-center text-white text-xs md:-translate-x-1/2 z-10">02</div>
+                    <div class="hidden md:block md:w-1/2 md:pr-12"></div>
+                    <div class="ml-14 md:ml-0 md:w-1/2 md:pl-12 rtl:md:text-right rtl:md:pl-0 rtl:md:pr-12 w-full">
+                        <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
+                            <h3 class="text-xl font-playfair font-bold text-emerald mb-2">Kintamani Volcano</h3>
+                            <p class="text-gray-600 text-sm mb-3">Mt Batur View, Hot Spring, Penglipuran Village, Coffee Plantation.</p>
+                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600&auto=format&fit=crop" class="w-full h-32 object-cover rounded-sm mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative flex flex-col md:flex-row items-center group" data-aos="fade-left">
+                    <div class="absolute left-0 md:left-1/2 w-10 h-10 bg-emerald border-4 border-gold rounded-full flex items-center justify-center text-white text-xs md:-translate-x-1/2 z-10">03</div>
+                    <div class="ml-14 md:ml-0 md:w-1/2 md:pr-12 md:text-right rtl:md:text-left rtl:md:pr-0 rtl:md:pl-12 w-full">
+                        <div class="bg-white p-6 rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer">
+                            <h3 class="text-xl font-playfair font-bold text-emerald mb-2">Bedugul Area Tour</h3>
+                            <p class="text-gray-600 text-sm mb-3">Ulun Danu Temple, Strawberry Garden, Tanah Lot Sunset.</p>
+                            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop" class="w-full h-32 object-cover rounded-sm mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                    <div class="hidden md:block md:w-1/2 md:pl-12"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Masonry) -->
+    <section class="py-24 lg:py-32 px-6 bg-emerald text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold">Captured Moments</h2>
+            </div>
+           <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in">
+        <img src=https://images.pexels.com/photos/7709872/pexels-photo-7709872.jpeg?w=600&auto=format&fit=crop class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop" class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in" data-aos-delay="200">
+        <img src=https://images.unsplash.com/photo-1773563745938-8fb1ee951064?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in" data-aos-delay="300">
+        <img src=https://images.unsplash.com/photo-1596273214323-a8486cce7c9b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in" data-aos-delay="400">
+        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?w=600&auto=format&fit=crop" class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+    <div class="group relative overflow-hidden rounded-sm break-inside-avoid" data-aos="zoom-in" data-aos-delay="500">
+        <img src=https://plus.unsplash.com/premium_photo-1669018128972-d43d65810fa4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D class="w-full transition-transform duration-700 group-hover:scale-110">
+    </div>
+</div>
+        </div>
+    </section>
+
+   <!-- Testimonials Section -->
+<section class="py-24 lg:py-32 px-6 bg-ivory relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: radial-gradient(#0F3D3E 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3">Testimonials</span>
+            <h2 class="text-4xl font-playfair font-bold text-emerald">What Our Guests Say</h2>
+        </div>
+        
+        <div class="swiper testimonial-swiper pb-12" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <!-- Testimonial 1 -->
+                <div class="swiper-slide px-4">
+                    <div class="bg-white/80 backdrop-blur border border-white/50 p-8 md:p-12 rounded-sm shadow-xl max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <!-- Photo -->
+                            <div class="shrink-0">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop" 
+                                     alt="Zakaria Alotaibi" 
+                                     class="w-32 h-32 rounded-full object-cover border-4 border-gold shadow-lg">
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1 text-center md:text-left rtl:md:text-right">
+                                <div class="flex justify-center md:justify-start gap-1 text-gold text-sm mb-4">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-emerald/80 text-lg md:text-xl font-playfair italic leading-relaxed mb-6">"The most professional service we've had in Bali. The driver was punctual, the car was spotless, and the itinerary was perfectly tailored to our needs."</p>
+                                <h4 class="font-bold text-matte uppercase tracking-wide text-sm">Zakaria Alotaibi</h4>
+                                <span class="text-gold text-xs uppercase tracking-widest">Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="swiper-slide px-4">
+                    <div class="bg-white/80 backdrop-blur border border-white/50 p-8 md:p-12 rounded-sm shadow-xl max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <!-- Photo -->
+                            <div class="shrink-0">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&auto=format&fit=crop" 
+                                     alt="Mohammed Al-Attas" 
+                                     class="w-32 h-32 rounded-full object-cover border-4 border-gold shadow-lg">
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1 text-center md:text-left rtl:md:text-right">
+                                <div class="flex justify-center md:justify-start gap-1 text-gold text-sm mb-4">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-emerald/80 text-lg md:text-xl font-playfair italic leading-relaxed mb-6">"We booked the Hiace for our family reunion. Everything went smoothly from booking to the end of the tour. Truly premium."</p>
+                                <h4 class="font-bold text-matte uppercase tracking-wide text-sm">Mohammed Al-Attas</h4>
+                                <span class="text-gold text-xs uppercase tracking-widest">Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="swiper-slide px-4">
+                    <div class="bg-white/80 backdrop-blur border border-white/50 p-8 md:p-12 rounded-sm shadow-xl max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <!-- Photo -->
+                            <div class="shrink-0">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop" 
+                                     alt="Talal Abu Talal" 
+                                     class="w-32 h-32 rounded-full object-cover border-4 border-gold shadow-lg">
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1 text-center md:text-left rtl:md:text-right">
+                                <div class="flex justify-center md:justify-start gap-1 text-gold text-sm mb-4">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-emerald/80 text-lg md:text-xl font-cairo leading-relaxed mb-6">"تجربة فاخرة بكل المقاييس. السائق محترف جداً والسيارة مريحة. أنصح الجميع بالتعامل مع الفوزان بالي تور."</p>
+                                <h4 class="font-bold text-matte uppercase tracking-wide text-sm font-cairo">Talal Abu Talal</h4>
+                                <span class="text-gold text-xs uppercase tracking-widest font-cairo">Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="swiper-slide px-4">
+                    <div class="bg-white/80 backdrop-blur border border-white/50 p-8 md:p-12 rounded-sm shadow-xl max-w-4xl mx-auto">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <!-- Photo -->
+                            <div class="shrink-0">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&auto=format&fit=crop" 
+                                     alt="Ibrahim Bin Ahmad" 
+                                     class="w-32 h-32 rounded-full object-cover border-4 border-gold shadow-lg">
+                            </div>
+                            <!-- Content -->
+                            <div class="flex-1 text-center md:text-left rtl:md:text-right">
+                                <div class="flex justify-center md:justify-start gap-1 text-gold text-sm mb-4">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="text-emerald/80 text-lg md:text-xl font-playfair italic leading-relaxed mb-6">"Amazing experience! The VW tour was so much fun and our driver knew all the best spots. Highly recommend!"</p>
+                                <h4 class="font-bold text-matte uppercase tracking-wide text-sm">Ibrahim Bin Ahmad</h4>
+                                <span class="text-gold text-xs uppercase tracking-widest">Saudi Arabia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination mt-8"></div>
+        </div>
+    </div>
+</section>
+
+-->
+<section id="contact" class="py-24 lg:py-32 px-6 bg-ivory">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3">Get in Touch</span>
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-emerald">Contact Us</h2>
+            <div class="w-20 h-[2px] bg-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Left: Info & Socials -->
+            <div class="space-y-8" data-aos="fade-right">
+                <p class="text-gray-600 leading-relaxed">
+                    Ready to experience Bali like never before? For instant booking confirmation & custom itineraries, reach out directly via WhatsApp or check our location below.
+                </p>
+
+                <!-- Contact Items -->
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0">
+                        <i class="fa-brands fa-whatsapp text-xl text-green-600"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald text-lg">WhatsApp</h4>
+                        <a href="https://wa.me/6285647100418" class="text-gray-600 hover:text-gold transition-colors">+62 856-4710-0418</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0">
+                        <i class="fa-regular fa-envelope text-xl text-gold"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald text-lg">Email</h4>
+                        <a href="mailto:fauzansallahudin@gmail.com" class="text-gray-600 hover:text-gold transition-colors">fauzansallahudin@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0">
+                        <i class="fa-brands fa-tiktok text-xl text-matte"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald text-lg">TikTok</h4>
+                        <span class="text-gray-600">@fauzan.bali8</span>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-5">
+                    <div class="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm shrink-0">
+                        <i class="fa-brands fa-snapchat text-xl text-yellow-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald text-lg">Snapchat</h4>
+                        <span class="text-gray-600">@azimaaaaa26</span>
+                    </div>
+                </div>
+
+                <!-- Mini Map -->
+                <div class="mt-6 w-full h-64 bg-white rounded-sm overflow-hidden shadow-lg border border-gray-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.9517689187664!2d115.23638009999999!3d-8.5040642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d002885f9cf%3A0x5a6d2da18cf26db7!2sSpring%20bali!5e0!3m2!1sen!2sid!4v1779722440859!5m2!1sen!2sid" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Right: Large Map / Visual (Optional clean layout) -->
+            <div class="hidden lg:block w-full h-[600px] bg-white rounded-sm overflow-hidden shadow-xl border border-gray-100 relative" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&auto=format&fit=crop" 
+                     class="w-full h-full object-cover opacity-90" alt="Bali Location">
+                <div class="absolute inset-0 bg-emerald/40 flex items-center justify-center">
+                    <div class="text-center text-white p-8 backdrop-blur-sm bg-white/10 rounded-sm border border-white/20">
+                        <i class="fa-solid fa-location-dot text-4xl text-gold mb-4"></i>
+                        <h3 class="text-2xl font-playfair font-bold mb-2">AlFauzan Bali Tour</h3>
+                        <p class="text-sm text-white/80">Jl. Dewi Saraswati, Badung, Bali 80352</p>
+                        <a href="https://maps.app.goo.gl/TrsAHPvqsAWrU96A6" target="_blank" class="inline-block mt-4 text-xs uppercase tracking-widest border-b border-gold pb-1 hover:text-gold transition-colors">Open in Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Book Section -->
+<section id="how-to-book" class="py-24 lg:py-32 px-6 bg-white relative overflow-hidden">
+    <!-- Decorative bg -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-3">Booking Process</span>
+            <h2 class="text-4xl md:text-5xl font-playfair font-bold text-emerald">How to Book</h2>
+            <div class="w-20 h-[2px] bg-gold mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <!-- Step 1 -->
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-ivory border-2 border-gold flex items-center justify-center group-hover:bg-emerald group-hover:border-emerald transition-all duration-300 shadow-lg">
+                    <i class="fa-solid fa-compass text-3xl text-gold group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-xl font-playfair font-bold text-emerald mb-2">1. Choose Package</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Browse tours, activities, or car rental options on our website.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-ivory border-2 border-gold flex items-center justify-center group-hover:bg-green-600 group-hover:border-green-600 transition-all duration-300 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-3xl text-gold group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-xl font-playfair font-bold text-emerald mb-2">2. Chat via WhatsApp</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Click the WhatsApp button below and send your tour/date request.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-ivory border-2 border-gold flex items-center justify-center group-hover:bg-emerald group-hover:border-emerald transition-all duration-300 shadow-lg">
+                    <i class="fa-solid fa-check-double text-3xl text-gold group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-xl font-playfair font-bold text-emerald mb-2">3. Confirm & Pay</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">We'll confirm availability and share secure payment details instantly.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-ivory border-2 border-gold flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-300 shadow-lg">
+                    <i class="fa-solid fa-plane-departure text-3xl text-gold group-hover:text-emerald transition-colors"></i>
+                </div>
+                <h3 class="text-xl font-playfair font-bold text-emerald mb-2">4. Enjoy Your Trip</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Relax while our professional driver & team handle everything.</p>
+            </div>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="500">
+            <a href="https://wa.me/6285647100418?text=Hello%20AlFauzan%20Bali%20Tour,%20I%20would%20like%20to%20book%20a%20tour." 
+               class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 shadow-xl shadow-green-600/25 hover:scale-105 hover:shadow-2xl">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                Book Now via WhatsApp
+            </a>
+            <p class="text-gray-500 text-xs mt-4 uppercase tracking-wider">Response within 5 minutes • 24/7 Support</p>
+        </div>
+    </div>
+</section>
+<!-- Contact Section 
+
+    <!-- Footer -->
+    <footer class="bg-matte text-white pt-20 pb-8 border-t border-gold/30">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-2">
+                <span class="text-3xl font-playfair font-bold text-white tracking-wider block mb-6">AlFauzan<span class="text-gold">.</span></span>
+                <p class="text-white/60 max-w-md leading-relaxed text-sm">
+                    Providing premium travel experiences in Bali since 2020. We specialize in private tours, luxury transport, and exclusive island adventures tailored for the discerning traveler.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-white/60 text-sm">
+                    <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+                    <li><a href="#destinations" class="hover:text-gold transition-colors">Destinations</a></li>
+                    <li><a href="#cars" class="hover:text-gold transition-colors">Car Rental</a></li>
+                    <li><a href="#contact" class="hover:text-gold transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-gold font-bold uppercase tracking-widest text-xs mb-6">Follow Us</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-emerald transition-all duration-300 rounded-full"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-emerald transition-all duration-300 rounded-full"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-gold hover:border-gold hover:text-emerald transition-all duration-300 rounded-full"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center border-t border-white/10 pt-8">
+            <p class="text-white/40 text-xs tracking-wide" data-i18n="footer_copy">© 2026 AlFauzan Bali Tour. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+   <a href="https://wa.me/6285647100418?text=Hello%20AlFauzan%20Bali%20Tour,%20I%20need%20assistance." class="fixed bottom-8 right-8 z-50 bg-green-600 hover:bg-green-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 animate-float group">
+    <i class="fa-brands fa-whatsapp text-3xl group-hover:rotate-12 transition-transform"></i>
+</a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

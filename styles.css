@@ -1,0 +1,82 @@
+/* --- Global & Base --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Font Classes for dynamic switching */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-cairo {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F8F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0F3D3E;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #C8A96B;
+}
+
+/* Selection Color */
+::selection {
+    background: #C8A96B;
+    color: #ffffff;
+}
+
+/* RTL Adjustments */
+html[dir="rtl"] .fa-arrow-right {
+    transform: rotate(180deg);
+}
+
+html[dir="rtl"] .swiper-pagination-bullet {
+    margin: 0 4px;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+    background: #C8A96B !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 20px !important;
+    border-radius: 4px !important;
+}
+
+/* Smooth Image Loading */
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
+/* Glassmorphism Navbar Transition */
+#nav-bg.scrolled {
+    background-color: rgba(15, 61, 62, 0.95);
+    backdrop-filter: blur(12px);
+}
